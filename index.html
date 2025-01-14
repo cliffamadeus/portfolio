@@ -21,6 +21,25 @@
         height: auto;
       }
 
+      .avatar{
+        justify-content: start;
+        
+      }
+
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+     
+      }
+
+      .flex-container > div {
+        width: 35vw;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+
       .full-screen {
         height: 100vh; 
         width: 100%;   
@@ -28,6 +47,20 @@
         justify-content: center;
         align-items: center; 
         font-size: 1.5rem; 
+      }
+
+      @media (max-width: 768px) {
+        .full-screen {
+          font-size: 1.2rem; 
+          padding: 1rem;     
+        }
+      }
+
+      @media (max-width: 480px) {
+        .full-screen {
+          font-size: 1rem; 
+          padding: 0.5rem; 
+        }
       }
     </style>
   </head>
@@ -71,37 +104,36 @@
   data-bs-smooth-scroll="true"
   class="scrollspy-example p-3 rounded-2 bg-dark text-white"
   tabindex="0"
->
+  >
   <h4 id="general-information">General Information</h4>
 
-  <div class="container">
-    <div class="row full-screen">
-      <div class="col col-6 text-center">
-        <img
-          style="border-radius: 50%; width: 200px;"
-          src="https://avatars.githubusercontent.com/u/16995636?s=400&u=9696944981ef90bc40066579185c78b5b38932f6&v=4"
-          alt="..."
-        />
-        <h2 class="text-orange">CLIFF AMADEUS F. EVANGELIO</h2>
-        <h4>Instructor | Programmer</h4>
-        <h5><i>Manolo Fortich, Bukidnon</i></h5>
+  <div class="full-screen">
+    <div class="flex-container">
+      <div>
+        <div class="avatar">
+          <img
+            style="border-radius: 50%; width: 200px;"
+            src="https://avatars.githubusercontent.com/u/16995636?s=400&u=9696944981ef90bc40066579185c78b5b38932f6&v=4"
+            alt="..."
+          />
+          <h2 class="text-orange">CLIFF AMADEUS F. EVANGELIO</h2>
+          <h4>Instructor | Programmer</h4>
+          <h5><i>Manolo Fortich, Bukidnon</i></h5>
+        </div>
+         
       </div>
-
-      <div class="col col-6 vertical-line">
+      <div class="vertical-line" >
         <div style="margin-left: 2rem;">
-          <h3 class="text-orange">CURRENT STATS</h3>
-          <br />
-          <h5>Looks</h5>
+          <h3 class="text-orange " >CURRENT STATS</h3>
+          <h5 style="margin-top: 2rem;">Looks</h5>
           <div class="progress" role="progressbar" aria-label="Basic example">
             <div class="progress-bar w-100 bg-warning text-dark"><b>100%</b></div>
           </div>
-          <br />
-          <h5>Coding Skills</h5>
+          <h5 style="margin-top: 2rem;">Coding Skills</h5>
           <div class="progress" role="progressbar" aria-label="Basic example">
             <div class="progress-bar w-75 bg-warning text-dark"><b>75%</b></div>
           </div>
-          <br />
-          <h5>Energy</h5>
+          <h5 style="margin-top: 2rem;">Energy</h5>
           <div class="progress" role="progressbar" aria-label="Basic example">
             <div class="progress-bar w-50 bg-warning text-dark"><b>50%</b></div>
           </div>
@@ -114,63 +146,79 @@
 
   <div id="education" class="vertical-line full-screen">
     <div style="margin-left: 2rem;">
-      <h4 class="text-orange">EDUCATION</h4>
-      <br />
-
-      <h6><b>Graduate School</b></h6>
-      <p><i>Mindanao State University - Iligan Institute of Technology (MSCA) - Ongoing</i></p>
-
-      <h6><b>Tertiary School</b></h6>
-      <p><i>Central Mindanao University (BSIT) - Class of 2019</i></p>
-
-      <h6><b>Secondary School</b></h6>
-      <p><i>Central Mindanao University Laboratory High School - Class of 2013</i></p>
-
-      <h6><b>Primary School</b></h6>
-      <p><i>Musuan Elementary School - Class of 2009</i></p>
+      <div class="container py-3">
+        <h4 class="text-orange">EDUCATION</h4>
+      
+        <div class="row">
+          <div class="col-12">
+            <h6><b>Graduate School</b></h6>
+            <p><i>Mindanao State University - Iligan Institute of Technology (MSCA) - Ongoing</i></p>
+          </div>
+      
+          <div class="col-12">
+            <h6><b>Tertiary School</b></h6>
+            <p><i>Central Mindanao University (BSIT) - Class of 2019</i></p>
+          </div>
+      
+          <div class="col-12">
+            <h6><b>Secondary School</b></h6>
+            <p><i>Central Mindanao University Laboratory High School - Class of 2013</i></p>
+          </div>
+      
+          <div class="col-12">
+            <h6><b>Primary School</b></h6>
+            <p><i>Musuan Elementary School - Class of 2009</i></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <hr />
 
-  <div id="work-experience" class="vertical-line full-screen">
-    <div style="margin-left: 2rem;">
-      <h4 class="text-orange">WORK EXPERIENCE</h4>
-      <br />
+  <div id="work-experience" style="margin-top:5rem;"></div>
+  <div class="vertical-line full-screen">
+    <div class="container py-3">
+      <p class="text-orange fs-4">WORK EXPERIENCE</p>
+    
+      <div class="row">
 
-      <h6><b>IT Consultant</b></h6>
-      <p><i>CMU - Alumni Relations and Linkages Office - October 2024 - Present</i></p>
-
-      <h6><b>Instructor</b></h6>
-      <p><i>Northern Bukidnon State College - August 2022 - Present</i></p>
-
-      <h6><b>Affiliate Faculty</b></h6>
-      <p><i>CMU - College of Information Sciences and Computing - January 2021 - July 2022</i></p>
-
-      <h6><b>Customer Service Representative</b></h6>
-      <p><i>CMU - Alumni Alumni Association - June 2019 - July 2022</i></p>
-
-      <h6><b>IT Staff</b></h6>
-      <p><i>CMU - Alumni Relations and Linkages Office - June 2019 - July 2022</i></p>
-
-      <h6><b>Mobile Developer</b></h6>
-      <p><i>NexusGrid - June 2018 - December 2018</i></p>
-
-      <h6><b>Game Asset Developer</b></h6>
-      <p><i>PixelBit Studios - October 2017 - March 2018</i></p>
-
-      <h6><b>On the Job Training</b></h6>
-      <p><i>Next BPO Solutions - Jan 2017 - May 2017</i></p>
+        <div class="col-12">
+          <p><b>Instructor</b></p>
+          <p><i>Northern Bukidnon State College - August 2022 - Present</i></p>
+        </div>
+    
+        <div class="col-12">
+          <p><b>IT Staff</b></p>
+          <p><i>CMU - Alumni Relations and Linkages Office - June 2019 - July 2022</i></p>
+        </div>
+    
+        <div class="col-12">
+          <p><b>Mobile Developer</b></p>
+          <p><i>NexusGrid - June 2018 - December 2018</i></p>
+        </div>
+    
+        <div class="col-12">
+          <p><b>Game Asset Developer</b></p>
+          <p><i>PixelBit Studios - October 2017 - March 2018</i></p>
+        </div>
+    
+        <div class="col-12">
+          <p><b>On the Job Training</b></p>
+          <p><i>Next BPO Solutions - Jan 2017 - May 2017</i></p>
+        </div>
+      </div>
     </div>
   </div>
 
+  <hr />
   <div id="projects" class="vertical-line full-screen">
-    <div style="margin-left: 2rem;">
-      <h4 class="text-orange">PROJECTS</h4>
-      <br>
+    <div class="container py-3">
+      <p class="text-orange fs-4">PROJECTS</p>
       <h1>COMING SOON :> </h1>
     </div>
   </div>
+
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
