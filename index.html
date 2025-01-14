@@ -63,6 +63,7 @@
       </div>
     </div>
   </nav>
+  
   <div
   data-bs-spy="scroll"
   data-bs-target="#navbar-example2"
@@ -163,6 +164,22 @@
     </div>
   </div>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navbarLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  const navbarCollapse = document.querySelector(".navbar-collapse");
 
+  navbarLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (navbarCollapse.classList.contains("show")) {
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+          toggle: true,
+        });
+      }
+    });
+  });
+});
+
+</script>
 </body>
 </html>
