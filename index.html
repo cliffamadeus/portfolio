@@ -16,8 +16,13 @@
       .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='orange' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
       }
-      .vertical-line {
+      .vertical-line-left {
         border-left: 6px solid rgb(255, 176, 6);
+        height: auto;
+      }
+
+      .vertical-line-right {
+        border-right: 6px solid rgb(255, 176, 6);
         height: auto;
       }
 
@@ -29,11 +34,11 @@
       .flex-container {
         display: flex;
         flex-wrap: wrap;
-     
+        align-items: center;
       }
 
       .flex-container > div {
-        width: 35vw;
+        width: 45vw;
         margin: 10px;
         text-align: center;
         line-height: 75px;
@@ -53,6 +58,13 @@
         .full-screen {
           font-size: 1.2rem; 
           padding: 1rem;     
+        }
+
+        .flex-container {
+        flex-direction: column;
+        }
+        .avatar {
+          margin-bottom: 20px;
         }
       }
 
@@ -98,53 +110,48 @@
   </nav>
   
   <div
-  data-bs-spy="scroll"
-  data-bs-target="#navbar-example2"
-  data-bs-root-margin="0px 0px -40%"
-  data-bs-smooth-scroll="true"
-  class="scrollspy-example p-3 rounded-2 bg-dark text-white"
-  tabindex="0"
+    data-bs-spy="scroll"
+    data-bs-target="#navbar-example2"
+    data-bs-smooth-scroll="true"
+    class="scrollspy-example p-3 rounded-2 bg-dark text-white"
+    tabindex="0"
   >
-  <h4 id="general-information">General Information</h4>
-
-  <div class="full-screen">
+  <h4  id="general-information">General Information</h4>
+  <div style="margin-bottom: 15vh;"
+       class="vertical-line-right full-screen">
     <div class="flex-container">
-      <div>
-        <div class="avatar">
-          <img
-            style="border-radius: 50%; width: 200px;"
-            src="https://avatars.githubusercontent.com/u/16995636?s=400&u=9696944981ef90bc40066579185c78b5b38932f6&v=4"
-            alt="..."
-          />
-          <h2 class="text-orange">CLIFF AMADEUS F. EVANGELIO</h2>
-          <h4>Instructor | Programmer</h4>
-          <h5><i>Manolo Fortich, Bukidnon</i></h5>
-        </div>
-         
+      <div class="avatar">
+        <img
+          style="border-radius: 50%; width: 200px;"
+          src="https://avatars.githubusercontent.com/u/16995636?s=400&u=9696944981ef90bc40066579185c78b5b38932f6&v=4"
+          alt="..."
+        />
+        <h4 class="text-orange">CLIFF AMADEUS F. EVANGELIO</h4>
+        <h5>Instructor | Programmer</h5>
+        <h5><i>Manolo Fortich, Bukidnon</i></h5>
       </div>
-      <div class="vertical-line" >
-        <div style="margin-left: 2rem;">
-          <h3 class="text-orange " >CURRENT STATS</h3>
-          <h5 style="margin-top: 2rem;">Looks</h5>
-          <div class="progress" role="progressbar" aria-label="Basic example">
-            <div class="progress-bar w-100 bg-warning text-dark"><b>100%</b></div>
-          </div>
-          <h5 style="margin-top: 2rem;">Coding Skills</h5>
-          <div class="progress" role="progressbar" aria-label="Basic example">
-            <div class="progress-bar w-75 bg-warning text-dark"><b>75%</b></div>
-          </div>
-          <h5 style="margin-top: 2rem;">Energy</h5>
-          <div class="progress" role="progressbar" aria-label="Basic example">
-            <div class="progress-bar w-50 bg-warning text-dark"><b>50%</b></div>
-          </div>
+  
+      <div style="margin-left: 2rem;">
+        <h3 class="text-orange">CURRENT STATS</h3>
+        <h5 style="margin-top: 2rem;">Looks</h5>
+        <div class="progress" role="progressbar" aria-label="Basic example">
+          <div class="progress-bar w-100 bg-warning text-dark"><b>100%</b></div>
+        </div>
+        <h5 style="margin-top: 2rem;">Coding Skills</h5>
+        <div class="progress" role="progressbar" aria-label="Basic example">
+          <div class="progress-bar w-75 bg-warning text-dark"><b>75%</b></div>
+        </div>
+        <h5 style="margin-top: 2rem;">Energy</h5>
+        <div class="progress" role="progressbar" aria-label="Basic example">
+          <div class="progress-bar w-50 bg-warning text-dark"><b>50%</b></div>
         </div>
       </div>
     </div>
   </div>
-
+  
   <hr />
 
-  <div id="education" class="vertical-line full-screen">
+  <div id="education" class="vertical-line-left full-screen">
     <div style="margin-left: 2rem;">
       <div class="container py-3">
         <h4 class="text-orange">EDUCATION</h4>
@@ -177,7 +184,7 @@
   <hr />
 
   <div id="work-experience" style="margin-top:5rem;"></div>
-  <div class="vertical-line full-screen">
+  <div class="vertical-line-right full-screen">
     <div class="container py-3">
       <p class="text-orange fs-4">WORK EXPERIENCE</p>
     
@@ -212,10 +219,11 @@
   </div>
 
   <hr />
-  <div id="projects" class="vertical-line full-screen">
+  <div id="projects" class="vertical-line-left full-screen">
     <div class="container py-3">
       <p class="text-orange fs-4">PROJECTS</p>
-      <h1>COMING SOON :> </h1>
+      <h3>COMING SOON </h3>
+      <h1 class="text-orange">:></h1> 
     </div>
   </div>
 
