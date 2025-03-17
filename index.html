@@ -151,35 +151,7 @@
   
   <hr />
 
-  <div id="education" class="vertical-line-left full-screen">
-    <div style="margin-left: 2rem;">
-      <div class="container py-3">
-        <h4 class="text-orange">EDUCATION</h4>
-      
-        <div class="row">
-          <div class="col-12">
-            <h6><b>Graduate School</b></h6>
-            <p><i>Mindanao State University - Iligan Institute of Technology (MSCA) - Ongoing</i></p>
-          </div>
-      
-          <div class="col-12">
-            <h6><b>Tertiary School</b></h6>
-            <p><i>Central Mindanao University (BSIT) - Class of 2019</i></p>
-          </div>
-      
-          <div class="col-12">
-            <h6><b>Secondary School</b></h6>
-            <p><i>Central Mindanao University Laboratory High School - Class of 2013</i></p>
-          </div>
-      
-          <div class="col-12">
-            <h6><b>Primary School</b></h6>
-            <p><i>Musuan Elementary School - Class of 2009</i></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div id="education" class="vertical-line-left full-screen"></div>
 
   <hr />
 
@@ -187,17 +159,7 @@
   
 
   <hr />
-  <div id="projects" class="vertical-line-left full-screen">
-    <div class="container py-3">
-      <p class="text-orange fs-4">PROJECTS</p>
-     
-      <div class="col-12">
-        <p><b>On the Job Training</b></p>
-        <p><i>Next BPO Solutions - Jan 2017 - May 2017</i></p>
-      </div>
-
-    </div>
-  </div>
+  <div id="projects" class="vertical-line-left full-screen"></div>
 
 </div>
 <script>
@@ -216,9 +178,37 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+const educationData = [
+        { level: "Graduate School", institution: "Mindanao State University - Iligan Institute of Technology (MSCA)", duration: "Ongoing" },
+        { level: "Tertiary School", institution: "Central Mindanao University (BSIT)", duration: "Class of 2019" },
+        { level: "Secondary School", institution: "Central Mindanao University Laboratory High School", duration: "Class of 2013" },
+        { level: "Primary School", institution: "Musuan Elementary School", duration: "Class of 2009" }
+];
+
+    const educationContainer = document.getElementById("education");
+    
+    let educationHTML = `
+        <div class="vertical-line-left full-screen">
+            <div style="margin-left: 2rem;">
+                <div class="container py-3">
+                    <h4 class="text-orange">EDUCATION</h4>
+                    <div class="row"
+                         style="margin-top:5vh;">
+                        ${educationData.map(item => `
+                            <div class="col-12">
+                                <p><b class="text-orange">${item.level}</b><i> | ${item.institution} - ${item.duration}</i></p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+        </div>`;
+    
+educationContainer.innerHTML = educationHTML;
+
 document.addEventListener("DOMContentLoaded", function () {
     const workExperienceData = [
-        { title: "Instructor", company: "Northern Bukidnon State College", duration: "August 2022 - Present", class: "text-orange" },
+        { title: "Instructor", company: "Northern Bukidnon State College", duration: "August 2022 - Present" },
         { title: "IT Staff", company: "CMU - Alumni Relations and Linkages Office", duration: "June 2019 - July 2022" },
         { title: "Mobile Developer", company: "NexusGrid", duration: "June 2018 - December 2018" },
         { title: "Game Asset Developer", company: "PixelBit Studios", duration: "October 2017 - March 2018" },
@@ -231,11 +221,11 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="vertical-line-right full-screen">
             <div class="container py-3">
                 <p class="text-orange fs-4">WORK EXPERIENCE</p>
-                <div class="row">
+                <div class="row"
+                     style="margin-top:5vh;">
                     ${workExperienceData.map(item => `
                         <div class="col-12">
-                            <p><b class="${item.class || ''}">${item.title}</b></p>
-                            <p><i>${item.company} - ${item.duration}</i></p>
+                            <p><b class="text-orange">${item.title}</b> | <i>${item.company} - ${item.duration}</i></p>
                         </div>
                     `).join('')}
                 </div>
@@ -244,6 +234,33 @@ document.addEventListener("DOMContentLoaded", function () {
     
     workExperienceContainer.innerHTML = workExperienceHTML;
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const projectsData = [
+        { title: "Poject Kalasan", company: "Northern Bukidnon State College", duration: "August 2023 - Present" },
+        { title: "EXIF Processor", company: "Northern Bukidnon State College", duration: "Present" },
+    ];
+
+    const projectsContainer = document.getElementById("projects");
+    
+    let projectsHTML = `
+        <div class="vertical-line-right full-screen">
+            <div class="container py-3">
+                <p class="text-orange fs-4">Projects</p>
+                <div class="row"
+                     style="margin-top:5vh;">
+                    ${projectsData.map(item => `
+                        <div class="col-12">
+                            <p><b class="text-orange">${item.title}</b> | <i>${item.company} - ${item.duration}</i></p>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        </div>`;
+    
+    projectsContainer.innerHTML = projectsHTML;
+});
+
 
 </script>
 </body>
