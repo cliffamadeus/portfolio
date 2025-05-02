@@ -158,6 +158,24 @@
   <div id="work-experience" class="full-screen"></div>
   <hr />
   <div id="projects" class="full-screen"></div>
+  <!--Project Modal-->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-black">
+        <div class="modal-header">
+          <h5 class="modal-title" id="projectModalLabel">Project Title</h5>
+          <button type="button" style="
+            filter: invert(100%) brightness(200%);
+          " class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="projectModalDetails"></p>
+          <div id="projectModalIcons" class="d-flex gap-2 mt-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
 </div>
 <script>
@@ -240,19 +258,38 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "Project Kalasan",
             company: "Northern Bukidnon State College",
             duration: "August 2023 - Present",
+            description: "An environmental project for mapping tree species using EXIF Metadata",
             icons: ["code-slash-outline", "map-outline", "leaf-outline", "analytics-outline"]
         },
         {
             title: "EXIF Processor",
             company: "Northern Bukidnon State College",
             duration: "July 2024 - Present",
+            description: "Processes image metadata for geotagging and cataloging.",
             icons: ["code-slash-outline", "image-outline", "camera-outline"]
         },
+        ,
         {
-            title: "CMU-ARLO-IS",
+            title: "Wildlife Search",
+            company: "Personal Project",
+            duration: "January 2025 - Present",
+            description: "A project that uses iNaturalist API to plot observed Flora and Fauna from the platform",
+            icons: ["code-slash-outline", "map-outline","paw-outline","fish-outline", "leaf-outline"]
+        },
+        {
+            title: "CMU ARLO IS",
             company: "Central Mindanao University",
             duration: "June 2019 - Present",
+            description: "Integrated system for ARLO at CMU including GIS and alumni tracking.",
             icons: ["code-slash-outline", "people-outline", "map-outline"]
+        },
+        ,
+        {
+            title: "CMU Wayfinding",
+            company: "Central Mindanao University",
+            duration: "June 2016 - Present",
+            description: "An interactive campus map of Central Mindanao University",
+            icons: ["code-slash-outline", "map-outline"]
         },
     ];
 
@@ -275,16 +312,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 Projects
             </p>
             <div class="row" style="margin-top:5vh;">
-                ${projectsData.map(item => `
+                ${projectsData.map((item, index) => `
                     <div class="col-12 mb-3">
-                        <div class="d-flex flex-wrap align-items-center gap-2">
+                        <div class="d-flex flex-wrap align-items-center gap-2 project-item" data-index="${index}" style="cursor:pointer;">
                             <b class="text-orange me-2">${item.title}</b>
                             <i class="me-2">${item.company} - ${item.duration}</i>
                             ${item.icons.map(icon => `
                                 <ion-icon 
                                     name="${icon}" 
                                     title="${iconDescriptions[icon] || 'Feature'}"
-                                    style="font-size: 24px;" 
+                                    style="font-size: 30px;" 
                                     class="text-orange"
                                 ></ion-icon>
                             `).join('')}
@@ -296,10 +333,29 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>`;
 
     projectsContainer.innerHTML = projectsHTML;
+
+    // Add click listeners to each project item
+    document.querySelectorAll('.project-item').forEach(el => {
+        el.addEventListener('click', function () {
+            const index = this.getAttribute('data-index');
+            const project = projectsData[index];
+
+            document.getElementById('projectModalLabel').innerText = project.title;
+            document.getElementById('projectModalDetails').innerText = `${project.company} | ${project.duration}\n\n${project.description}`;
+            document.getElementById('projectModalIcons').innerHTML = project.icons.map(icon => `
+                <ion-icon 
+                    name="${icon}" 
+                    title="${iconDescriptions[icon] || 'Feature'}" 
+                    style="font-size: 30px;" 
+                    class="text-orange"
+                ></ion-icon>
+            `).join('');
+
+            const modal = new bootstrap.Modal(document.getElementById('projectModal'));
+            modal.show();
+        });
+    });
 });
-
-
-
 
 </script>
 </body>
