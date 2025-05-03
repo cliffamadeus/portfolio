@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="vertical-line-left full-screen">
               <div style="margin-left: 2rem;">
                   <div class="container py-3">
-                      <h4 class="text-orange" style="font-family: 'Press Start 2P';">EDUCATION</h4>
+                      <h4 class="text-orange text-center" style="font-family: 'Press Start 2P';">EDUCATION</h4>
                       <div class="row"
                            style="margin-top:5vh;">
                           ${educationData.map(item => `
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let workExperienceHTML = `
           <div class="vertical-line-right full-screen">
               <div class="container py-3">
-                  <p class="text-orange fs-4" style="font-family: 'Press Start 2P';">WORK EXPERIENCE</p>
+                  <p class="text-orange fs-4 text-center " style="font-family: 'Press Start 2P';">WORK EXPERIENCE</p>
                   <div class="row"
                        style="margin-top:5vh;">
                       ${workExperienceData.map(item => `
@@ -130,8 +130,8 @@ document.addEventListener("DOMContentLoaded", () => {
       let projectsHTML = `
       <div class="vertical-line-left full-screen">
           <div class="container py-3">
-              <p class="text-orange fs-4" style="font-family: 'Press Start 2P';">
-                  Projects
+              <p class="text-orange fs-4 text-center" style="font-family: 'Press Start 2P';">
+                  PROJECTS
               </p>
               <div class="row" style="margin-top:5vh;">
                   ${projectsData.map((item, index) => `
