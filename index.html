@@ -1,376 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAFE</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Google Fonts (Press Start 2P) -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- External CSS -->
+    <link href="./style.css" rel="stylesheet">
+</head>
 
-    <style>
-      .bg-black {
-        background-color: #212529!important; 
-      }
-      .text-orange {
-        color: orange !important; 
-      }
-      .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='orange' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
-      }
-      .vertical-line-left {
-        border-left: 6px solid rgb(255, 176, 6);
-        height: auto;
-      }
-
-      .vertical-line-right {
-        border-right: 6px solid rgb(255, 176, 6);
-        height: auto;
-      }
-
-      .avatar{
-        justify-content: start;
-        
-      }
-
-      .flex-container {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-      }
-
-      .flex-container > div {
-        width: 45vw;
-        margin: 5px;
-        text-align: center;
-        line-height: 75px;
-        font-size: 30px;
-      }
-
-      .full-screen {
-        height: 100vh; 
-        width: 100%;   
-        display: flex; 
-        justify-content: center;
-        align-items: center; 
-        font-size: 1.5rem; 
-      }
-
-      @media (max-width: 768px) {
-        .full-screen {
-          font-size: 1.2rem; 
-          padding: 1rem;     
-        }
-
-        .flex-container {
-        flex-direction: column;
-        }
-        .avatar {
-          margin-bottom: 20px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .full-screen {
-          font-size: 1rem; 
-          padding: 0.5rem; 
-        }
-      }
-    </style>
-  </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-black fixed-top" data-bs-theme="dark">
-    <div class="container-fluid">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-orange" href="#stats">Stats</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-orange" href="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-orange" href="#work-experience">Work Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-orange" href="#projects">Projects</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-  <div
-    data-bs-spy="scroll"
-    data-bs-target="#navbar-example2"
-    data-bs-smooth-scroll="true"
-    class="scrollspy-example p-3 rounded-2 bg-dark text-white"
-    tabindex="0"
-  >
-  <h4  id="stats">Stats</h4>
-  <div style="margin-bottom: 10vh; margin-top: -6vh;" 
-       class="vertical-line-right full-screen">
-    <div class="flex-container">
-      <div class="avatar">
-        <img
-          style="border-radius: 50%; width: 200px;"
-          src="https://scontent.fcgy2-1.fna.fbcdn.net/v/t1.6435-9/118963671_3433247290030171_8964877802029062628_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeH1-vLf-ho6hDi8kQxc3sAVVbd4E8GmtYNVt3gTwaa1g4zeFfGOZiu2TGsO16--liCadSjr5nnshbPQPZIz7V53&_nc_ohc=zbkG5fY77k0Q7kNvwEIs3U8&_nc_oc=Admo606SJ5EoJEYuFyUShrX_3Ls4eOTg6TXP3yuAg0d0fk1w5JgrO7SZstJ52hnHtj0&_nc_pt=1&_nc_zt=23&_nc_ht=scontent.fcgy2-1.fna&_nc_gid=ruclDXW0a4XVGYbByAfwNw&oh=00_AfGzMme0D9SGHmpQw2iythsr9-OKMfRkk3XK8cERUOEanQ&oe=683D81C2"
-          alt="..."
-        />
-        <h4 class="text-orange">CLIFF AMADEUS F. EVANGELIO</h4>
-        <h5>Instructor | Programmer</h5>
-        <h5><i>Manolo Fortich, Bukidnon</i></h5>
-        <h5 class="text-orange" id="date-time"></h5>
-      </div>
-  
-      <div style="margin-left: 2rem;">
-        <h3 class="text-orange">CURRENT STATS</h3>
-        <h5 style="margin-top: 2rem;">Looks</h5>
-        <div class="progress" role="progressbar" aria-label="Basic example">
-          <div class="progress-bar w-100 bg-warning text-dark"><b>100%</b></div>
-        </div>
-        <h5 style="margin-top: 2rem;">Coding Skills</h5>
-        <div class="progress" role="progressbar" aria-label="Basic example">
-          <div class="progress-bar w-75 bg-warning text-dark" ><b>80%</b></div>
-        </div>
-        <h5 style="margin-top: 2rem;">Energy</h5>
-        <div class="progress" role="progressbar" aria-label="Basic example">
-          <div class="progress-bar w-25 bg-warning text-dark"><b>35%</b></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <hr />
-  <div id="education" class="full-screen"></div>
-  <hr />
-  <div id="work-experience" class="full-screen"></div>
-  <hr />
-  <div id="projects" class="full-screen"></div>
-  <!--Project Modal-->
-  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content bg-black">
-            <div class="modal-header">
-                <h5 class="modal-title" id="projectModalLabel">Project Title</h5>
-                <button type="button" style="filter: invert(100%) brightness(200%);" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-black fixed-top" data-bs-theme="dark">
+        <div class="container-fluid">
+            <!-- Navbar Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-orange" href="#stats" style="font-family: 'Press Start 2P';">Stats | </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-orange" href="#education" style="font-family: 'Press Start 2P';">Education | </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-orange" href="#work-experience" style="font-family: 'Press Start 2P';">Work Experience | </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-orange" href="#projects" style="font-family: 'Press Start 2P';">Projects</a>
+                    </li>
+                </ul>
+                <!-- Date & Time -->
+                <span class="navbar-text ms-auto">
+                    <p class="text-orange mb-0" style="font-family: 'Press Start 2P'; font-size: 10px;" id="date-time">
+                    </p>
+                </span>
             </div>
-            <div class="modal-body">
-                <p id="projectModalDetails"></p>
-                <div id="projectModalIcons" class="d-flex justify-content-center gap-3 mt-3 flex-wrap align-items-center">
+        </div>
+    </nav>
+
+    <!-- Main Content Area (Scrolling Spy) -->
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-smooth-scroll="true"
+        class="scrollspy-example p-3 rounded-2 bg-dark text-white" tabindex="0">
+
+        <!-- Stats Section -->
+        <h4 id="stats">Stats</h4>
+        <div style="margin-bottom: 10vh; margin-top: -1vh;" class="vertical-line-right full-screen">
+            <div class="flex-container">
+                <div class="avatar">
+                    <img style="border-radius: 50%; width: 200px;"
+                        src="https://scontent.fcgy2-1.fna.fbcdn.net/v/t1.6435-9/118963671_3433247290030171_8964877802029062628_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeH1-vLf-ho6hDi8kQxc3sAVVbd4E8GmtYNVt3gTwaa1g4zeFfGOZiu2TGsO16--liCadSjr5nnshbPQPZIz7V53&_nc_ohc=zbkG5fY77k0Q7kNvwEIs3U8&_nc_oc=Admo606SJ5EoJEYuFyUShrX_3Ls4eOTg6TXP3yuAg0d0fk1w5JgrO7SZstJ52hnHtj0&_nc_pt=1&_nc_zt=23&_nc_ht=scontent.fcgy2-1.fna&_nc_gid=ruclDXW0a4XVGYbByAfwNw&oh=00_AfGzMme0D9SGHmpQw2iythsr9-OKMfRkk3XK8cERUOEanQ&oe=683D81C2""
+                        alt="...">
+                    <h4 class="text-orange">CLIFF AMADEUS F. EVANGELIO</h4>
+                    <h5>Instructor | Programmer</h5>
+                    <h5><i>Manolo Fortich, Bukidnon</i></h5>
                 </div>
-            </div>
-        </div>
-    </div>
-  </div>
 
-  
+                <div style="margin-left: 2rem;">
+                    <h3 class="text-orange" style="font-family: 'Press Start 2P';">CURRENT STATS</h3>
+                    <h5 style="margin-top: 2rem; font-family: 'Press Start 2P';">LOOKS</h5>
+                    <div class="progress" role="progressbar" aria-label="Basic example" style=" height: 40px;">
+                        <div class="progress-bar w-100 bg-success text-white progress-bar-striped progress-bar-animated"><b>100%</b></div>
+                    </div>
 
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const navbarLinks = document.querySelectorAll(".navbar-nav .nav-link");
-  const navbarCollapse = document.querySelector(".navbar-collapse");
+                    <h5 style="margin-top: 2rem; font-family: 'Press Start 2P';">CODING SKILLS</h5>
+                    <div class="progress" role="progressbar" aria-label="Basic example" style=" height: 40px;">
+                        <div class="progress-bar w-75 bg-warning text-white progress-bar-striped progress-bar-animated"><b>80%</b></div>
+                    </div>
 
-  navbarLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      if (navbarCollapse.classList.contains("show")) {
-        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-          toggle: true,
-        });
-      }
-    });
-  });
-});
-
-const educationData = [
-        { level: "Graduate School", institution: "Mindanao State University - Iligan Institute of Technology (MSCA)", duration: "Ongoing" },
-        { level: "Tertiary School", institution: "Central Mindanao University (BSIT)", duration: "Class of 2019" },
-        { level: "Secondary School", institution: "Central Mindanao University Laboratory High School", duration: "Class of 2013" },
-        { level: "Primary School", institution: "Musuan Elementary School", duration: "Class of 2009" }
-];
-
-    const educationContainer = document.getElementById("education");
-    
-    let educationHTML = `
-        <div class="vertical-line-left full-screen">
-            <div style="margin-left: 2rem;">
-                <div class="container py-3">
-                    <h4 class="text-orange">EDUCATION</h4>
-                    <div class="row"
-                         style="margin-top:5vh;">
-                        ${educationData.map(item => `
-                            <div class="col-12">
-                                <p><b class="text-orange">${item.level}</b><i> | ${item.institution} - ${item.duration}</i></p>
-                            </div>
-                        `).join('')}
+                    <h5 style="margin-top: 2rem; font-family: 'Press Start 2P';">ENERGY</h5>
+                    <div class="progress" role="progressbar" aria-label="Basic example" style=" height: 40px;">
+                        <div class="progress-bar w-25 bg-danger text-white progress-bar-striped progress-bar-animated"><b>35%</b></div>
                     </div>
                 </div>
             </div>
-        </div>`;
-    
-educationContainer.innerHTML = educationHTML;
+        </div>
 
-document.addEventListener("DOMContentLoaded", function () {
-    const workExperienceData = [
-        { title: "IT Consultant", company: "Central Mindanao University - Office of Alumni Relations", duration: "November 2024 - Present" },
-        { title: "Instructor", company: "Northern Bukidnon State College", duration: "August 2022 - Present" },
-        { title: "IT Staff", company: "CMU - Alumni Relations and Linkages Office", duration: "June 2019 - July 2022" },
-        { title: "Mobile Developer", company: "NexusGrid", duration: "June 2018 - December 2018" },
-        { title: "Game Asset Developer", company: "PixelBit Studios", duration: "October 2017 - March 2018" },
-        { title: "On the Job Training", company: "Next BPO Solutions", duration: "Jan 2017 - May 2017" }
-    ];
+        <!-- Education Section -->
+        <hr />
+        <div id="education" class="full-screen"></div>
 
-    const workExperienceContainer = document.getElementById("work-experience");
-    
-    let workExperienceHTML = `
-        <div class="vertical-line-right full-screen">
-            <div class="container py-3">
-                <p class="text-orange fs-4">WORK EXPERIENCE</p>
-                <div class="row"
-                     style="margin-top:5vh;">
-                    ${workExperienceData.map(item => `
-                        <div class="col-12">
-                            <p><b class="text-orange">${item.title}</b> | <i>${item.company} - ${item.duration}</i></p>
-                        </div>
-                    `).join('')}
+        <!-- Work Experience Section -->
+        <hr />
+        <div id="work-experience" class="full-screen"></div>
+
+        <!-- Projects Section -->
+        <hr />
+        <div id="projects" class="full-screen"></div>
+
+        <!-- Project Modal -->
+        <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-black">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="projectModalLabel">Project Title</h5>
+                        <button type="button" style="filter: invert(100%) brightness(200%);" class="btn-close"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="projectModalDetails"></p>
+                        <div id="projectModalIcons" class="d-flex justify-content-center gap-3 mt-3 flex-wrap align-items-center"></div>
+                    </div>
                 </div>
             </div>
-        </div>`;
-    
-    workExperienceContainer.innerHTML = workExperienceHTML;
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const projectsData = [
-        {
-            title: "Project Kalasan",
-            company: "Northern Bukidnon State College",
-            duration: "August 2023 - Present",
-            description: "An environmental project for mapping tree species using EXIF Metadata",
-            icons: ["code-slash-outline", "map-outline", "leaf-outline", "analytics-outline"],
-            githubLink: "https://github.com/cliffamadeus/project-kalasan"
-        },
-        {
-            title: "EXIF Processor",
-            company: "Northern Bukidnon State College",
-            duration: "July 2024 - Present",
-            description: "Processes image metadata for geotagging and cataloging.",
-            icons: ["code-slash-outline", "image-outline", "camera-outline"],
-            githubLink: "https://cliffamadeus.github.io/exif-app/"
-        },
-        {
-            title: "Wildlife Search",
-            company: "Personal Project",
-            duration: "January 2025 - Present",
-            description: "A project that uses iNaturalist API to plot observed Flora and Fauna from the platform",
-            icons: ["code-slash-outline", "map-outline","paw-outline","fish-outline", "leaf-outline","flower-outline"],
-            githubLink: "https://cliffamadeus.github.io/wildlife-search/"
-        },
-        {
-            title: "CMU ARLO IS",
-            company: "Central Mindanao University",
-            duration: "June 2019 - Present",
-            description: "Integrated system for ARLO at CMU including GIS and alumni tracking.",
-            icons: ["code-slash-outline", "people-outline", "map-outline"],
-            githubLink: ""
-        },
-        {
-            title: "CMU Wayfinding",
-            company: "Central Mindanao University",
-            duration: "June 2016 - Present",
-            description: "An interactive campus map of Central Mindanao University",
-            icons: ["code-slash-outline", "map-outline"],
-            githubLink: "https://cliffamadeus.github.io/cmu-wayfinding/#/app/map-main"
-        },
-    ];
-
-    const iconDescriptions = {
-        "code-slash-outline": "Software Development",
-        "map-outline": "Geolocation or Mapping",
-        "leaf-outline": "Environmental or Sustainability",
-        "analytics-outline": "Data Analysis or Monitoring",
-        "image-outline": "Image Processing",
-        "camera-outline": "Camera Integration",
-        "people-outline": "User or Community Engagement"
-    };
-
-    const projectsContainer = document.getElementById("projects");
-
-    let projectsHTML = `
-    <div class="vertical-line-left full-screen">
-        <div class="container py-3">
-            <p class="text-orange fs-4">
-                Projects
-            </p>
-            <div class="row" style="margin-top:5vh;">
-                ${projectsData.map((item, index) => `
-                    <div class="col-12 mb-3">
-                        <div class="d-flex flex-wrap align-items-center gap-2 project-item" data-index="${index}" style="cursor:pointer;">
-                            <b class="text-orange me-2">${item.title}</b>
-                            |<i class="me-2"> ${item.company} - ${item.duration}</i>  |
-                            <div class="class="d-flex flex-wrap justify-content-center align-items-center gap-2 project-item">
-                              ${item.icons.map(icon => `
-                                <ion-icon 
-                                    name="${icon}" 
-                                    title="${iconDescriptions[icon] || 'Feature'}"
-                                    style="font-size: 30px;" 
-                                    class="text-orange"
-                                ></ion-icon>
-                              `).join('')}
-                            </div>
-                           
-                            <a href="${item.githubLink}" target="_blank">
-                                <ion-icon name="logo-github" style="font-size: 30px;" class="text-dark"></ion-icon>
-                            </a>
-                        </div>
-                    </div>
-                `).join('')}
-            </div>
         </div>
-    </div>`;
+    </div>
 
-    projectsContainer.innerHTML = projectsHTML;
+    <!-- Sticky Footer -->
+    <footer class="bg-dark text-center text-white position-sticky bottom-0">
+      <small style="height: 2vh; font-size: 2vh;">&copy; 2025 Cliff Amadeus F. Evangelio. All rights reserved.</small>
+    </footer>
 
-    // Add click listeners to each project item
-    document.querySelectorAll('.project-item').forEach(el => {
-        el.addEventListener('click', function () {
-            const index = this.getAttribute('data-index');
-            const project = projectsData[index];
-
-            document.getElementById('projectModalLabel').innerText = project.title;
-            document.getElementById('projectModalDetails').innerText = `${project.company} | ${project.duration}\n\n${project.description}`;
-            document.getElementById('projectModalIcons').innerHTML = project.icons.map(icon => `
-                <ion-icon 
-                    name="${icon}" 
-                    title="${iconDescriptions[icon] || 'Feature'}" 
-                    style="font-size: 30px;" 
-                    class="text-orange"
-                ></ion-icon>
-            `).join('');
-            // Add GitHub link to the modal
-            document.getElementById('projectModalDetails').innerHTML += `<br><a href="${project.githubLink}" target="_blank">View on GitHub</a>`;
-
-            const modal = new bootstrap.Modal(document.getElementById('projectModal'));
-            modal.show();
-        });
-    });
-});
-
-
-</script>
-<script src="./datetime.js"></script>
+    <!-- External Scripts -->
+    <script src="./app.js"></script>
+    <script src="./datetime.js"></script>
 </body>
+
 </html>
