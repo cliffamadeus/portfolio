@@ -42,34 +42,65 @@ document.addEventListener("DOMContentLoaded", () => {
   educationContainer.innerHTML = educationHTML;
   
   document.addEventListener("DOMContentLoaded", function () {
-      const workExperienceData = [
-          { title: "IT Consultant", company: "Central Mindanao University - Office of Alumni Relations", duration: "November 2024 - Present" },
-          { title: "Instructor", company: "Northern Bukidnon State College", duration: "August 2022 - Present" },
-          { title: "IT Staff", company: "CMU - Alumni Relations and Linkages Office", duration: "June 2019 - July 2022" },
-          { title: "Mobile Developer", company: "NexusGrid", duration: "June 2018 - December 2018" },
-          { title: "Game Asset Developer", company: "PixelBit Studios", duration: "October 2017 - March 2018" },
-          { title: "On the Job Training", company: "Next BPO Solutions", duration: "Jan 2017 - May 2017" }
-      ];
-  
-      const workExperienceContainer = document.getElementById("work-experience");
-      
-      let workExperienceHTML = `
-          <div class="vertical-line-right full-screen">
-              <div class="container py-3">
-                  <p class="text-orange fs-4 text-center " style="font-family: 'Press Start 2P';">WORK EXPERIENCE</p>
-                  <div class="row"
-                       style="margin-top:5vh;">
-                      ${workExperienceData.map(item => `
-                          <div class="col-12">
-                              <p><b class="text-orange">${item.title}</b> | <i>${item.company} - ${item.duration}</i></p>
-                          </div>
-                      `).join('')}
-                  </div>
-              </div>
-          </div>`;
-      
-      workExperienceContainer.innerHTML = workExperienceHTML;
-  });
+    const workExperienceData = [
+        { title: "IT Consultant", company: "Central Mindanao University - Office of Alumni Relations", start: "November 2024", end: "Present" },
+        { title: "Instructor", company: "Northern Bukidnon State College", start: "August 2022", end: "Present" },
+        { title: "IT Staff", company: "CMU - Alumni Relations and Linkages Office", start: "June 2019", end: "July 2022" },
+        { title: "Mobile Developer", company: "NexusGrid", start: "June 2018", end: "December 2018" },
+        { title: "Game Asset Developer", company: "PixelBit Studios", start: "October 2017", end: "March 2018" },
+        { title: "On the Job Training", company: "Next BPO Solutions", start: "Jan 2017", end: "May 2017" }
+    ];
+
+    const workExperienceContainer = document.getElementById("work-experience");
+
+    // Helper function to convert a string like "November 2024" to a valid Date object
+    function parseDate(dateString) {
+        const [month, year] = dateString.split(" ");
+        const monthIndex = new Date(`${month} 1, 2020`).getMonth(); // Get month index
+        return new Date(year, monthIndex);
+    }
+
+    // Function to calculate the duration between two dates
+    function calculateDuration(start, end) {
+        const startDate = parseDate(start);
+        let endDate = end.toLowerCase() === "present" ? new Date() : parseDate(end);
+
+        // Calculate the difference in months
+        let years = endDate.getFullYear() - startDate.getFullYear();
+        let months = endDate.getMonth() - startDate.getMonth();
+
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        return `${years} years ${months} months`;
+    }
+
+    // Create HTML for work experience with the duration
+    let workExperienceHTML = `
+        <div class="vertical-line-right full-screen">
+            <div class="container py-3">
+                <p class="text-orange fs-4 text-center" style="font-family: 'Press Start 2P';">WORK EXPERIENCE</p>
+                <div class="row" style="margin-top:5vh;">
+                    ${workExperienceData.map(item => `
+                        <div class="col-12">
+                            <p>
+                            <b class="text-orange">${item.title}</b> | 
+                            <i>${item.company} (${item.start} - ${item.end})</i>
+                            <b class="text-orange">(${calculateDuration(item.start, item.end)})</b>
+                            </p>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        </div>`;
+
+    // Set the generated HTML to the container
+    workExperienceContainer.innerHTML = workExperienceHTML;
+});
+
+
   
   document.addEventListener("DOMContentLoaded", function () {
       const projectsData = [
