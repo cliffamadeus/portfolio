@@ -1,10 +1,7 @@
-const dateTimeElement = document.getElementById('date-time');
-    
-    // Get the current date and time
+function updateDateTime() {
     const now = new Date();
 
-    // Format options
-    const options = {
+    const dateOptions = {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
@@ -12,8 +9,20 @@ const dateTimeElement = document.getElementById('date-time');
       timeZoneName: 'short'
     };
 
-    // Format the date using locale
-    const formattedDate = now.toLocaleString(undefined, options);
+    const formattedDate = now.toLocaleString(undefined, dateOptions);
 
-    // Display in the h2
-    dateTimeElement.textContent = `Today is ${formattedDate}`;
+    const time24h = now.toLocaleTimeString(undefined, {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    });
+
+    document.getElementById('date-time').textContent = `Today is ${formattedDate} | ${time24h}`;
+}
+
+// Initial call
+updateDateTime();
+
+// Update every second
+ setInterval(updateDateTime, 1000);
