@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="vertical-line-left full-screen">
               <div style="margin-left: 2rem;">
                   <div class="container py-3">
-                      <h4 class="text-orange">EDUCATION</h4>
+                      <h4 class="text-orange" style="font-family: 'Press Start 2P';">EDUCATION</h4>
                       <div class="row"
                            style="margin-top:5vh;">
                           ${educationData.map(item => `
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let workExperienceHTML = `
           <div class="vertical-line-right full-screen">
               <div class="container py-3">
-                  <p class="text-orange fs-4">WORK EXPERIENCE</p>
+                  <p class="text-orange fs-4" style="font-family: 'Press Start 2P';">WORK EXPERIENCE</p>
                   <div class="row"
                        style="margin-top:5vh;">
                       ${workExperienceData.map(item => `
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
               duration: "June 2016 - Present",
               description: "An interactive campus map of Central Mindanao University",
               icons: ["code-slash-outline", "map-outline"],
-              githubLink: "https://cliffamadeus.github.io/cmu-wayfinding/#/app/map-main"
+              githubLink: "https://cliffamadeus.github.io/cmu-wayfinding/"
           },
       ];
   
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let projectsHTML = `
       <div class="vertical-line-left full-screen">
           <div class="container py-3">
-              <p class="text-orange fs-4">
+              <p class="text-orange fs-4" style="font-family: 'Press Start 2P';">
                   Projects
               </p>
               <div class="row" style="margin-top:5vh;">
