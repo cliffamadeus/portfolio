@@ -1,5 +1,6 @@
 const stats = [
     { label: 'LOOKS', value: 100, color: 'bg-success' },
+    { label: 'ADRENALINE', value: 100, color: 'bg-success' },
     { label: 'CODING SKILLS', value: 80, color: 'bg-warning' },
     { label: 'ENERGY', value: 15, color: 'bg-danger' }
   ];
