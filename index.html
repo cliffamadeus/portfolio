@@ -33,13 +33,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-orange" href="#stats" style="font-family: 'Press Start 2P'; font-size: .9rem;">Stats | </a>
+                        <a class="nav-link text-orange" href="#stats" style="font-family: 'Press Start 2P'; font-size: .9rem;">Stats</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-orange" href="#education" style="font-family: 'Press Start 2P'; font-size: .9rem;">Education | </a>
+                        <a class="nav-link text-orange" href="#education" style="font-family: 'Press Start 2P'; font-size: .9rem;">Education</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-orange" href="#work-experience" style="font-family: 'Press Start 2P'; font-size: .9rem;">Work | </a>
+                        <a class="nav-link text-orange" href="#work-experience" style="font-family: 'Press Start 2P'; font-size: .9rem;">Work</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-orange" href="#projects" style="font-family: 'Press Start 2P'; font-size: .9rem;">Projects</a>
@@ -60,7 +60,7 @@
 
         <!-- Stats Section -->
         <h4 id="stats">Stats</h4>
-        <div style="margin-bottom: 10vh; margin-top: -1vh;" class="vertical-line-right full-screen">
+        <div style="margin-bottom: 10vh;" class="vertical-line-right full-screen responsive-margin">
             <div class="flex-container">
                 <div class="avatar">
                     <img style="border-radius: 50%; width: 200px;"
@@ -69,40 +69,24 @@
                     <h4 class="text-orange">CLIFF AMADEUS F. EVANGELIO</h4>
                     <h5>Instructor | Programmer</h5>
                     <h5><i>Manolo Fortich, Bukidnon</i></h5>
-
-                    <div class="social-icons">
-                        <a href="https://facebook.com/cliffamadeus" target="_blank" title="Facebook">
-                          <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                        <a href="https://github.com/cliffamadeus" target="_blank" title="GitHub">
-                          <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                        <a href="https://ph.linkedin.com/in/cliff-amadeus-evangelio-450458134" target="_blank" title="LinkedIn">
-                          <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                        <a href="mailto:reconcliffy@gmail.com" target="_blank" title="Email">
-                          <ion-icon name="mail-outline"></ion-icon>
-                        </a>
-                      </div>
+                    <div id="tech-badges" class="tech-badges"></div>
+                        <div class="modal fade" id="techModal" tabindex="-1" aria-labelledby="techModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content bg-dark">
+                                <div class="modal-header">
+                                <h5 class="modal-title text-orange" id="techModalLabel" style="font-family: 'Press Start 2P';>Tech Name</h5>
+                                <button type="button" class="btn-close" style="filter: invert(100%) brightness(200%);" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-orange" id="techModalBody" style="font-family: 'Press Start 2P'; font-size: 20px; line-height: 1.5;" >
+                                Tech description here.
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                 </div>
 
-                <div style="margin-left: 2rem;">
-                    <h3 class="text-orange" style="font-family: 'Press Start 2P';">CURRENT STATS</h3>
-                    <h5 style="margin-top: 2rem; font-family: 'Press Start 2P';">LOOKS</h5>
-                    <div class="progress" role="progressbar" aria-label="Basic example" style=" height: 40px;">
-                        <div class="progress-bar w-100 bg-success text-white progress-bar-striped progress-bar-animated"><b>100%</b></div>
-                    </div>
+                <div id="stats-section" style="margin-left: 2rem;"></div>
 
-                    <h5 style="margin-top: 2rem; font-family: 'Press Start 2P';">CODING SKILLS</h5>
-                    <div class="progress" role="progressbar" aria-label="Basic example" style=" height: 40px;">
-                        <div class="progress-bar w-75 bg-warning text-white progress-bar-striped progress-bar-animated"><b>80%</b></div>
-                    </div>
-
-                    <h5 style="margin-top: 2rem; font-family: 'Press Start 2P';">ENERGY</h5>
-                    <div class="progress" role="progressbar" aria-label="Basic example" style=" height: 40px;">
-                        <div class="progress-bar w-25 bg-danger text-white progress-bar-striped progress-bar-animated"><b>35%</b></div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -138,12 +122,28 @@
 
     <!-- Sticky Footer -->
     <footer class="bg-dark text-center text-white position-sticky bottom-0">
-      <small style="height: 2vh; font-size: 2vh;">&copy; 2025 Cliff Amadeus F. Evangelio. All rights reserved.</small>
+      <small style="height: 2vh; font-size: 2vh;">&copy; 2025 Cliff Amadeus F. Evangelio. All rights reserved.
+        <div class="social-icons">
+            <a href="https://facebook.com/cliffamadeus" target="_blank" title="Facebook">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="https://github.com/cliffamadeus" target="_blank" title="GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+            <a href="https://ph.linkedin.com/in/cliff-amadeus-evangelio-450458134" target="_blank" title="LinkedIn">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a href="mailto:reconcliffy@gmail.com" target="_blank" title="Email">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+        </div>
+      </small>
     </footer>
 
     <!-- External Scripts -->
     <script src="./app.js"></script>
     <script src="./datetime.js"></script>
+    <script src="./stats.js"></script>
 </body>
 
 </html>
