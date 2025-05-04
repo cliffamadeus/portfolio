@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let projectsHTML = `
       <div class="vertical-line-left full-screen">
           <div class="container py-3">
-              <p class="text-orange fs-4 text-center" style="font-family: 'Press Start 2P';">
+              <p class="text-orange fs-4 text-center project-margin" style="font-family: 'Press Start 2P';">
                   PROJECTS
               </p>
               <div class="row" style="margin-top:5vh;">

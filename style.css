@@ -91,3 +91,21 @@ body {
   .social-icons a:hover::after {
     opacity: 1;
   }
+
+  .responsive-margin {
+    margin-top: 6vh; /* Default for mobile */
+  }
+  
+  .project-margin {
+    margin-top: -15vh; /* Default for mobile */
+  }
+
+  @media (min-width: 768px) {
+    .responsive-margin {
+      margin-top: -15vh; /* For tablets and up */
+    }
+    .project-margin {
+      margin-top: 15vh; /* Default for mobile */
+    }
+  }
+  
