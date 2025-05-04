@@ -18,4 +18,43 @@ const stats = [
       </div>
     `).join('')}
   `;
+
+  const techUsed = [
+    {
+      name: 'Code',
+      icon: 'code-slash-outline',
+      color: '#ffb006',
+      description: 'General programming tools and practices.'
+    },
+    {
+      name: 'Ionic',
+      icon: 'logo-ionic',
+      color: '#61dbfb',
+      description: 'Mobile-first UI toolkit for building hybrid apps.'
+    },
+    {
+      name: 'React',
+      icon: 'logo-react',
+      color: '#61dbfb',
+      description: 'JavaScript library for building interactive UIs.'
+    },
+    {
+      name: 'Node.js',
+      icon: 'logo-nodejs',
+      color: '#3c873a',
+      description: 'Backend runtime built on Chrome’s V8 engine.'
+    }
+];
   
+const container = document.getElementById('tech-badges');
+container.innerHTML = techUsed.map((tech, index) => `
+  <div class="badge-tooltip d-inline-block mx-2" title="${tech.description}">
+    <ion-icon 
+      name="${tech.icon}" 
+      style="color: ${tech.color}; font-size: 35px; cursor: pointer;" 
+      data-bs-toggle="modal" 
+      data-bs-target="#techModal" 
+      onclick="populateModal(${index})"
+    ></ion-icon>
+  </div>
+`).join('');

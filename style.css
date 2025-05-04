@@ -25,6 +25,9 @@ body {
 
   .avatar{
     justify-content: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
   }
 
@@ -107,5 +110,20 @@ body {
     .project-margin {
       margin-top: 15vh; /* Default for mobile */
     }
+  }
+
+  .tech-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .badge-tooltip {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .badge-tooltip:hover {
+    transform: scale(1.2);
   }
   
