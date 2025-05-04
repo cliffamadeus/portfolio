@@ -24,7 +24,7 @@ const stats = [
       name: 'Code',
       icon: 'code-slash-outline',
       color: '#ffb006',
-      description: 'General programming tools and practices.'
+      description: 'I code generally for FUN'
     },
     {
       name: 'Ionic',
@@ -58,3 +58,9 @@ container.innerHTML = techUsed.map((tech, index) => `
     ></ion-icon>
   </div>
 `).join('');
+
+function populateModal(index) {
+    const tech = techUsed[index];
+    document.getElementById('techModalLabel').textContent = tech.name;
+    document.getElementById('techModalBody').textContent = tech.description;
+}
