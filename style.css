@@ -1,4 +1,4 @@
-body {
+  body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; 
@@ -12,6 +12,34 @@ body {
   .text-mint-green {
     color: rgb(134, 192, 108) !important; 
   }
+  .text-light-green {
+    color: rgb(166, 199, 150) !important; 
+  }
+  .text-light-green-1 {
+    color: rgb(182, 199, 173) !important; 
+  }
+
+  .text-light-green-2 {
+    text-align: left;     
+    font-size: 1.25rem;       
+    line-height: 1;        
+    margin: 0;             
+    font-family: 'Montserrat', sans-serif;
+    opacity: 50%;
+}
+
+
+  /* Base font size for large screens */
+  .text-light-green, .text-light-green-1 {
+    font-size: 2rem; 
+  }
+
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    .text-light-green, .text-light-green-1 {
+        font-size: 1.2rem; 
+    }
+  }
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='green' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
   }
@@ -23,6 +51,12 @@ body {
   .vertical-line-right {
     border-right: 6px solid #86c06c;
     height: auto;
+  }
+
+  .align-items-left {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
   }
 
   .avatar{
