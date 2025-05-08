@@ -3,7 +3,9 @@ body {
     padding: 0;
     overflow-x: hidden; 
   }
-
+  .bg-dark-blue{
+    background-color: #071821;
+  }
   .bg-black {
     background-color: #212529!important; 
   }
@@ -11,7 +13,7 @@ body {
     color: rgb(134, 192, 108) !important; 
   }
   .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='orange' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='green' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
   }
   .vertical-line-left {
     border-left: 6px solid rgb(134, 192, 108);
@@ -19,7 +21,7 @@ body {
   }
 
   .vertical-line-right {
-    border-right: 6px solid rgb(134, 192, 108);
+    border-right: 6px solid #86c06c;
     height: auto;
   }
 
@@ -80,7 +82,7 @@ body {
 
   .social-icons a {
     margin: 0 10px;
-    color: #555;
+    color: #86c06c;
     font-size: 24px;
     transition: color 0.3s ease;
     position: relative;
@@ -88,7 +90,7 @@ body {
   }
 
   .social-icons a:hover {
-    color: #f97316; 
+    color: #86c06c; 
   }
 
   .social-icons a:hover::after {

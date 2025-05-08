@@ -164,11 +164,14 @@ document.addEventListener("DOMContentLoaded", () => {
               <p class="text-mint-green fs-4 text-center responsive-margin" style="font-family: 'Press Start 2P';">
                   PROJECTS
               </p>
+              <h6 class="text-mint-green text-center" style="font-family: 'Press Start 2P'; font-size:1rem;">
+                  (A sock drawer of them)
+              </h6 >
               <div class="row" style="margin-top:5vh;">
                   ${projectsData.map((item, index) => `
                       <div class="col-12 mb-3">
                           <div class="d-flex flex-wrap align-items-center gap-2 project-item" data-index="${index}" style="cursor:pointer;">
-                              <b class="text-mint-green me-2">${item.title}</b>
+                               <b class="text-mint-green me-2">${item.title}</b>
                               |<i class="me-2"> ${item.company} - ${item.duration}</i>  |
                               <div class="class="d-flex flex-wrap justify-content-center align-items-center gap-2 project-item">
                                 ${item.icons.map(icon => `
@@ -180,10 +183,6 @@ document.addEventListener("DOMContentLoaded", () => {
                                   ></ion-icon>
                                 `).join('')}
                               </div>
-                             
-                              <a href="${item.githubLink}" target="_blank">
-                                  <ion-icon name="logo-github" style="font-size: 30px;" class="text-dark"></ion-icon>
-                              </a>
                           </div>
                       </div>
                   `).join('')}
@@ -195,26 +194,39 @@ document.addEventListener("DOMContentLoaded", () => {
   
       // Add click listeners to each project item
       document.querySelectorAll('.project-item').forEach(el => {
-          el.addEventListener('click', function () {
-              const index = this.getAttribute('data-index');
-              const project = projectsData[index];
-  
-              document.getElementById('projectModalLabel').innerText = project.title;
-              document.getElementById('projectModalDetails').innerText = `${project.company} | ${project.duration}\n\n${project.description}`;
-              document.getElementById('projectModalIcons').innerHTML = project.icons.map(icon => `
-                  <ion-icon 
-                      name="${icon}" 
-                      title="${iconDescriptions[icon] || 'Feature'}" 
-                      style="font-size: 30px;" 
-                      class="text-pixel-green"
-                  ></ion-icon>
-              `).join('');
-              // Add GitHub link to the modal
-              document.getElementById('projectModalDetails').innerHTML += `<br><a href="${project.githubLink}" target="_blank">View on GitHub</a>`;
-  
-              const modal = new bootstrap.Modal(document.getElementById('projectModal'));
-              modal.show();
-          });
+        el.addEventListener('click', function () {
+          const index = this.getAttribute('data-index');
+          const project = projectsData[index];
+      
+          document.getElementById('projectModalLabel').innerText = project.title;
+      
+          document.getElementById('projectModalDetails').innerHTML = `
+            ${project.company} | ${project.duration}<br><br>${project.description}
+            <br>
+            <a 
+              style="text-decoration:none; font-family: 'Press Start 2P';"
+              class="text-mint-green"
+              href="${project.githubLink}" 
+              target="_blank"
+            >
+              <ion-icon name="logo-github" style="font-size: 30px;" class="text-mint-green"></ion-icon>
+              View on GitHub
+            </a>
+          `;
+      
+          document.getElementById('projectModalIcons').innerHTML = project.icons.map(icon => `
+            <ion-icon 
+              name="${icon}" 
+              title="${iconDescriptions[icon] || 'Feature'}" 
+              style="font-size: 30px;" 
+              class="text-pixel-green"
+            ></ion-icon>
+          `).join('');
+      
+          const modal = new bootstrap.Modal(document.getElementById('projectModal'));
+          modal.show();
+        });
       });
+      
   });
   
