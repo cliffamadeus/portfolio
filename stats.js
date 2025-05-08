@@ -8,7 +8,7 @@ const stats = [
   const statsContainer = document.getElementById('stats-section');
   
   statsContainer.innerHTML = `
-    <h3 class="text-orange" style="font-family: 'Press Start 2P';">CURRENT STATS</h3>
+    <h3 class="text-mint-green" style="font-family: 'Press Start 2P';">CURRENT STATS</h3>
     ${stats.map(stat => `
       <h5 style="margin-top: 2rem; font-family: 'Press Start 2P';">${stat.label}</h5>
       <div class="progress" role="progressbar" aria-label="Basic example" style="height: 40px;">
@@ -30,19 +30,19 @@ const stats = [
       name: 'Ionic',
       icon: 'logo-ionic',
       color: '#61dbfb',
-      description: 'Mobile-first UI toolkit for building hybrid apps.'
+      description: 'My go to cross platform framework'
     },
     {
       name: 'React',
       icon: 'logo-react',
       color: '#61dbfb',
-      description: 'JavaScript library for building interactive UIs.'
+      description: 'Fell inlove with its complexity'
     },
     {
       name: 'Node.js',
       icon: 'logo-nodejs',
       color: '#3c873a',
-      description: 'Backend runtime built on Chrome’s V8 engine.'
+      description: 'I can’t run Ionic and React without this one'
     }
 ];
   

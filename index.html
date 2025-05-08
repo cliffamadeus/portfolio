@@ -23,7 +23,7 @@
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg bg-black fixed-top" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-dark-blue fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
             <!-- Navbar Toggler -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -33,21 +33,21 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-orange" href="#stats" style="font-family: 'Press Start 2P'; font-size: .9rem;">Stats</a>
+                        <a class="nav-link text-mint-green" href="#stats" style="font-family: 'Press Start 2P'; font-size: .9rem;">Stats</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-orange" href="#education" style="font-family: 'Press Start 2P'; font-size: .9rem;">Education</a>
+                        <a class="nav-link text-mint-green" href="#work-experience" style="font-family: 'Press Start 2P'; font-size: .9rem;">Work</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-orange" href="#work-experience" style="font-family: 'Press Start 2P'; font-size: .9rem;">Work</a>
+                        <a class="nav-link text-mint-green" href="#projects" style="font-family: 'Press Start 2P'; font-size: .9rem;">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-orange" href="#projects" style="font-family: 'Press Start 2P'; font-size: .9rem;">Projects</a>
+                        <a class="nav-link text-mint-green" href="#education" style="font-family: 'Press Start 2P'; font-size: .9rem;">Education</a>
                     </li>
                 </ul>
                 <!-- Date & Time -->
                 <span class="navbar-text ms-auto">
-                    <p class="text-orange mb-0" style="font-family: 'Press Start 2P'; font-size: 10px;" id="date-time">
+                    <p class="text-mint-green mb-0" style="font-family: 'Press Start 2P'; font-size: 10px;" id="date-time">
                     </p>
                 </span>
             </div>
@@ -56,7 +56,7 @@
 
     <!-- Main Content Area (Scrolling Spy) -->
     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-smooth-scroll="true"
-        class="scrollspy-example p-3 rounded-2 bg-dark text-white" tabindex="0">
+        class="scrollspy-example p-3 rounded-2 bg-dark-blue text-white" tabindex="0">
 
         <!-- Stats Section -->
         <h4 id="stats">Stats</h4>
@@ -66,18 +66,18 @@
                     <img style="border-radius: 50%; width: 200px;"
                         src="https://scontent.fcgy2-1.fna.fbcdn.net/v/t1.6435-9/118963671_3433247290030171_8964877802029062628_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeH1-vLf-ho6hDi8kQxc3sAVVbd4E8GmtYNVt3gTwaa1g4zeFfGOZiu2TGsO16--liCadSjr5nnshbPQPZIz7V53&_nc_ohc=zbkG5fY77k0Q7kNvwEIs3U8&_nc_oc=Admo606SJ5EoJEYuFyUShrX_3Ls4eOTg6TXP3yuAg0d0fk1w5JgrO7SZstJ52hnHtj0&_nc_pt=1&_nc_zt=23&_nc_ht=scontent.fcgy2-1.fna&_nc_gid=ruclDXW0a4XVGYbByAfwNw&oh=00_AfGzMme0D9SGHmpQw2iythsr9-OKMfRkk3XK8cERUOEanQ&oe=683D81C2""
                         alt="...">
-                    <h4 class="text-orange">CLIFF AMADEUS F. EVANGELIO</h4>
-                    <h5>Instructor | Programmer</h5>
+                    <h2 class="text-mint-green"><b>CLIFF AMADEUS F. EVANGELIO</b></h2>
+                    <h5 class="text-mint-green">Mentor / Dev</h5>
                     <h5><i>Manolo Fortich, Bukidnon</i></h5>
                     <div id="tech-badges" class="tech-badges"></div>
                         <div class="modal fade" id="techModal" tabindex="-1" aria-labelledby="techModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content bg-dark">
+                            <div class="modal-content bg-dark-blue">
                                 <div class="modal-header">
-                                <h5 class="modal-title text-orange" id="techModalLabel" style="font-family: 'Press Start 2P';>Tech Name</h5>
+                                <h5 class="modal-title text-mint-green" id="techModalLabel" style="font-family: 'Press Start 2P';"">Tech Name</h5>
                                 <button type="button" class="btn-close" style="filter: invert(100%) brightness(200%);" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body text-orange" id="techModalBody" style="font-family: 'Press Start 2P'; font-size: 20px; line-height: 1.5;" >
+                                <div class="modal-body text-mint-green" id="techModalBody" style="font-family: 'Press Start 2P'; font-size: 20px; line-height: 1.5;" >
                                 Tech description here.
                                 </div>
                             </div>
@@ -90,10 +90,6 @@
             </div>
         </div>
 
-        <!-- Education Section -->
-        <hr />
-        <div id="education" class="full-screen"></div>
-
         <!-- Work Experience Section -->
         <hr />
         <div id="work-experience" class="full-screen"></div>
@@ -105,23 +101,27 @@
         <!-- Project Modal -->
         <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content bg-black">
+                <div class="modal-content bg-black" style="margin-top: 50%;">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="projectModalLabel">Project Title</h5>
+                        <h5 class="modal-title text-mint-green" id="projectModalLabel"  style="font-family: 'Press Start 2P';">Project Title</h5>
                         <button type="button" style="filter: invert(100%) brightness(200%);" class="btn-close"
                             data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p id="projectModalDetails"></p>
-                        <div id="projectModalIcons" class="d-flex justify-content-center gap-3 mt-3 flex-wrap align-items-center"></div>
+                        <p id="projectModalDetails" class="text-center" style="font-size: medium;"></p>
+                        <div id="projectModalIcons" class="d-flex justify-content-center gap-3 mt-3 flex-wrap align-items-center text-mint-green" style="font-size: medium;"></div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Education Section -->
+        <hr />
+        <div id="education" class="full-screen"></div>
     </div>
 
     <!-- Sticky Footer -->
-    <footer class="bg-dark text-center text-white position-sticky bottom-0">
+    <footer class="bg-dark-blue text-center text-white position-sticky bottom-0">
       <small style="height: 2vh; font-size: 2vh;">&copy; 2025 Cliff Amadeus F. Evangelio. All rights reserved.
         <div class="social-icons">
             <a href="https://facebook.com/cliffamadeus" target="_blank" title="Facebook">
