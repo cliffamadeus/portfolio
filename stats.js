@@ -8,7 +8,7 @@ const stats = [
   const statsContainer = document.getElementById('stats-section');
   
   statsContainer.innerHTML = `
-    <h3 class="text-orange" style="font-family: 'Press Start 2P';">CURRENT STATS</h3>
+    <h3 class="text-mint-green" style="font-family: 'Press Start 2P';">CURRENT STATS</h3>
     ${stats.map(stat => `
       <h5 style="margin-top: 2rem; font-family: 'Press Start 2P';">${stat.label}</h5>
       <div class="progress" role="progressbar" aria-label="Basic example" style="height: 40px;">

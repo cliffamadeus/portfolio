@@ -26,12 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="vertical-line-left full-screen">
               <div style="margin-left: 2rem;">
                   <div class="container py-3">
-                      <h4 class="text-orange text-center" style="font-family: 'Press Start 2P';">EDUCATION</h4>
+                      <h4 class="text-mint-green text-center" style="font-family: 'Press Start 2P';">EDUCATION</h4>
                       <div class="row"
                            style="margin-top:5vh;">
                           ${educationData.map(item => `
                               <div class="col-12">
-                                  <p><b class="text-orange">${item.level}</b><i> | ${item.institution} - ${item.duration}</i></p>
+                                  <p><b class="text-mint-green">${item.level}</b><i> | ${item.institution} - ${item.duration}</i></p>
                               </div>
                           `).join('')}
                       </div>
@@ -81,14 +81,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let workExperienceHTML = `
         <div class="vertical-line-right full-screen">
             <div class="container py-3">
-                <p class="text-orange fs-4 text-center" style="font-family: 'Press Start 2P';">WORK EXPERIENCE</p>
+                <p class="text-mint-green fs-4 text-center" style="font-family: 'Press Start 2P';">WORK EXPERIENCE</p>
                 <div class="row" style="margin-top:5vh;">
                     ${workExperienceData.map(item => `
                         <div class="col-12">
                             <p>
-                            <b class="text-orange">${item.title}</b> | 
+                            <b class="text-mint-green">${item.title}</b> | 
                             <i>${item.company} (${item.start} - ${item.end})</i>
-                            <b class="text-orange">(${calculateDuration(item.start, item.end)})</b>
+                            <b class="text-mint-green">(${calculateDuration(item.start, item.end)})</b>
                             </p>
                         </div>
                     `).join('')}
@@ -161,14 +161,14 @@ document.addEventListener("DOMContentLoaded", () => {
       let projectsHTML = `
       <div class="vertical-line-left full-screen">
           <div class="container py-3">
-              <p class="text-orange fs-4 text-center project-margin" style="font-family: 'Press Start 2P';">
+              <p class="text-mint-green fs-4 text-center project-margin" style="font-family: 'Press Start 2P';">
                   PROJECTS
               </p>
               <div class="row" style="margin-top:5vh;">
                   ${projectsData.map((item, index) => `
                       <div class="col-12 mb-3">
                           <div class="d-flex flex-wrap align-items-center gap-2 project-item" data-index="${index}" style="cursor:pointer;">
-                              <b class="text-orange me-2">${item.title}</b>
+                              <b class="text-mint-green me-2">${item.title}</b>
                               |<i class="me-2"> ${item.company} - ${item.duration}</i>  |
                               <div class="class="d-flex flex-wrap justify-content-center align-items-center gap-2 project-item">
                                 ${item.icons.map(icon => `
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                       name="${icon}" 
                                       title="${iconDescriptions[icon] || 'Feature'}"
                                       style="font-size: 30px;" 
-                                      class="text-orange"
+                                      class="text-mint-green"
                                   ></ion-icon>
                                 `).join('')}
                               </div>
@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
                       name="${icon}" 
                       title="${iconDescriptions[icon] || 'Feature'}" 
                       style="font-size: 30px;" 
-                      class="text-orange"
+                      class="text-pixel-green"
                   ></ion-icon>
               `).join('');
               // Add GitHub link to the modal
