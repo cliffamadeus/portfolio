@@ -156,3 +156,30 @@
     transform: scale(1.2);
   }
   
+  .stats-flex-container {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap ;
+    justify-content: center;
+  }
+  
+  .stats-flex-container > div {
+    background-color: #f1f1f1;
+    height: 10%;
+    width: 23%;
+    margin-left: 15px;
+
+  }
+
+  .stats-flex-container-1 {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .stats-flex-container-1 > div {
+    background-color: #f1f1f1;
+    height: 10%;
+    width: 25%;
+    margin: 5px;
+  }
