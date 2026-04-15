@@ -15,9 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const educationData = [
           { level: "Graduate School", institution: "Mindanao State University - Iligan Institute of Technology (MSCA)", duration: "Ongoing" },
-          { level: "Tertiary School", institution: "Central Mindanao University (BSIT)", duration: "Class of 2019" },
-          { level: "Secondary School", institution: "Central Mindanao University Laboratory High School", duration: "Class of 2013" },
-          { level: "Primary School", institution: "Musuan Elementary School", duration: "Class of 2009" }
+          { level: "Tertiary School", institution: "Central Mindanao University (BSIT)", duration: "Class of 2019" }
   ];
   
       const educationContainer = document.getElementById("education");
@@ -104,9 +102,26 @@ document.addEventListener("DOMContentLoaded", () => {
   
   document.addEventListener("DOMContentLoaded", function () {
       const projectsData = [
+            
           {
-              title: "Project Kalasan",
-              company: "Northern Bukidnon State College",
+              title: "GPX and Trail Analysis System",
+              company: "Personal",
+              duration: "",
+              description: "",
+              icons: ["code-slash-outline", "map-outline", "leaf-outline", "analytics-outline"],
+              githubLink: ""
+          },
+          {
+              title: "Projects and Commissions Management System ",
+              company: "Remote",
+              duration: "",
+              description: "",
+              icons: ["code-slash-outline", "map-outline", "leaf-outline", "analytics-outline"],
+              githubLink: ""
+          },
+          {
+              title: "Environmental Metadata Analytics & Web GIS",
+              company: "Personal",
               duration: "August 2023 - Present",
               description: "An environmental project for mapping tree species using EXIF Metadata",
               icons: ["code-slash-outline", "map-outline", "leaf-outline", "analytics-outline"],
@@ -114,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           {
               title: "EXIF Processor",
-              company: "Northern Bukidnon State College",
+              company: "Personal",
               duration: "July 2024 - Present",
               description: "Processes image metadata for geotagging and cataloging.",
               icons: ["code-slash-outline", "image-outline", "camera-outline"],
@@ -127,23 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
               description: "A project that uses iNaturalist API to plot observed Flora and Fauna from the platform",
               icons: ["code-slash-outline", "map-outline","paw-outline","fish-outline", "leaf-outline","flower-outline"],
               githubLink: "https://cliffamadeus.github.io/wildlife-search/"
-          },
-          {
-              title: "CMU ARLO IS",
-              company: "Central Mindanao University",
-              duration: "June 2019 - Present",
-              description: "Integrated system for ARLO at CMU including GIS and alumni tracking.",
-              icons: ["code-slash-outline", "people-outline", "map-outline"],
-              githubLink: ""
-          },
-          {
-              title: "CMU Wayfinding",
-              company: "Central Mindanao University",
-              duration: "June 2016 - Present",
-              description: "An interactive campus map of Central Mindanao University",
-              icons: ["code-slash-outline", "map-outline"],
-              githubLink: "https://cliffamadeus.github.io/cmu-wayfinding/"
-          },
+          }
       ];
   
       const iconDescriptions = {
