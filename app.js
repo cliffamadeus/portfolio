@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const educationData = [
           { level: "Graduate School", institution: "Mindanao State University - Iligan Institute of Technology (MSCA)", duration: "Ongoing" },
-          { level: "Tertiary School", institution: "Central Mindanao University (BSIT)", duration: "Class of 2019" }
+          { level: "Bachelors Degree", institution: "Central Mindanao University (BSIT)", duration: "Class of 2019" }
   ];
   
       const educationContainer = document.getElementById("education");
